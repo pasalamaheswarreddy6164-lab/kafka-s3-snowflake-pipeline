@@ -1,0 +1,16 @@
+# Environment files
+.env
+*.env
+
+# Notes / personal files
+implementationspark.txt
+
+# Sample/test data
+data.json
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code (optional)
+.vscode/
