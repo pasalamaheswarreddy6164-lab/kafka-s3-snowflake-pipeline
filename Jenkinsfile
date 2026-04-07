@@ -8,9 +8,9 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/pasalamaheswarreddy6164-lab/kafka-s3-snowflake-pipeline.git'
+        stage('Checkout') {
+             steps {
+                git branch: 'main', url: 'https://github.com/pasalamaheswarreddy6164-lab/kafka-s3-snowflake-pipeline.git'
             }
         }
 
