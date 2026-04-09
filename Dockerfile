@@ -9,4 +9,4 @@ COPY spark_pipeline.py /app/spark_pipeline.py
 
 WORKDIR /app
 
-CMD ["/opt/spark/bin/spark-submit", "/app/spark_pipeline.py"]
+CMD ["/opt/spark/bin/spark-submit","--packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0","/app/spark_pipeline.py"]
