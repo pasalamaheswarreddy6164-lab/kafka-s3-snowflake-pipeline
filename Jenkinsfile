@@ -9,7 +9,7 @@ pipeline {
     stages {
 
         stage('Checkout') {
-             steps {
+            steps {
                 git branch: 'main', url: 'https://github.com/pasalamaheswarreddy6164-lab/kafka-s3-snowflake-pipeline.git'
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh '''
                 docker run --rm \
-                --network kafka-network \
+                --network kafkas3_default \
                 -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
                 -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
                 spark-pipeline
